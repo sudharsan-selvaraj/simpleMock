@@ -1,0 +1,202 @@
+@import './bootstrap.css';
+
+$border-color: #e2e2e2;
+$border-width: 3px;
+$header-height: 60px;
+$body-color: #212529;
+$body-color-light: #808080;
+$hover-background: #f4f4f4;
+$accent: #004aae;
+$accent-selected: #f4f4f4;
+$no-data: #999;
+$green: #4CAF50;
+
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+}
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
+.clickable {
+  cursor: pointer;
+}
+.fas {
+  font-size: 12px;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.no-data {
+  color: $no-data;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+button {
+  text-transform: capitalize;
+
+  &.btn-primary {
+      &, &.disabled, &:disabled {
+        color: #fff;
+        background-color: $accent;
+        border-color: $accent;
+      }
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+label {
+  color: $no-data;
+  font-size: 14px;
+}
+
+.dropdown-input button {
+  color: $green;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  font-size: 16px;
+  color: $body-color;
+
+  .app {
+    width: 100vw;
+    height: 100vh;
+
+    .app-header {
+      height: 70px;
+      border-bottom: $border-width solid $border-color;
+
+      .app-header--logo {
+        width: 187px;
+        padding: 17px 2px;
+
+        img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+
+      .app-header--control-panel {
+        padding: 14px;
+      }
+    }
+
+    .app-body {
+      .mocks-list {
+        position: relative;
+        width: 25%;
+        height: calc(100vh - 70px);
+        border-right: $border-width solid $border-color;
+
+        .mocks-list--control-panel {
+          height: 40px;
+          position: sticky;
+          padding: 6px 10px;
+
+          i {
+            padding-left: 15px;
+          }
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          height: calc(100vh - 100px);
+          overflow: auto;
+
+          li {
+            padding: 15px 10px;
+            position: relative;
+            word-break: break-all;
+
+            &:hover {
+              background-color: $hover-background;
+
+              .mocks-list--options {
+                display: block;
+              }
+            }
+
+            &.active {
+              background-color: $accent-selected;
+            }
+
+            .mocks-list--endpoint {
+              font-size: 14px;
+              color: $body-color-light;
+
+              .fa-circle {
+                font-size: 5px;
+                position: relative;
+                top: -2px;
+                margin: 0px 6px;
+              }
+
+              .mocks-list--endpoint-method {
+                color: green;
+              }
+            }
+
+            .mocks-list--name, .mocks-list--endpoint {
+              padding-right: 20px;
+            }
+
+            .mocks-list--options {
+              position: absolute;
+              right: 10px;
+              top: 50%;
+              transform: translate(0, -50%);
+              display: none;
+            }
+          }
+        }
+      }
+
+      .mocks-details {
+        position: relative;
+        width: 75%;
+        padding: 30px;
+        height: calc(100vh - 70px);
+        overflow: auto;
+
+        .mocks-details--control-panel {
+          padding: 20px 0px;
+        }
+
+        textarea {
+          height: 248px;
+        }
+      }
+
+      .export-view {
+        padding: 30px;
+
+        textarea {
+          height: calc(100vh - 180px);
+        }
+      }
+    }
+  }
+
+  .fa-cog {
+    font-size: 16px;
+    vertical-align: middle;
+  }
+}

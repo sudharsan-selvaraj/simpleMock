@@ -1,0 +1,50 @@
+{
+  "name": "simplemock",
+  "version": "1.0.0",
+  "description": "Js script generator to mock api calls seamlessly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "./node_modules/.bin/node-sass -r ./src/style.scss -o ./docs/ --output-style=compressed; ./node_modules/.bin/node-sass --watch -r ./src/style.scss -o ./docs/ --output-style=compressed | webpack --mode production  --progress --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@sbalaji1192.github.com:sbalaji1192/simpleMock.git"
+  },
+  "keywords": [
+    "mock",
+    "api",
+    "javacript"
+  ],
+  "author": "Balaji Soundararajan",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.2",
+    "css-loader": "^3.6.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "^4.5.0",
+    "compressed-json": "^1.0.15",
+    "ecstatic": "^4.1.4",
+    "jquery": "^3.5.1",
+    "node-sass": "^4.14.1",
+    "popper.js": "^1.16.1",
+    "raw-loader": "^4.0.1",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-dom": "^16.13.1",
+    "redux": "^4.0.5",
+    "uglify-loader": "^3.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0"
+  }
+}
